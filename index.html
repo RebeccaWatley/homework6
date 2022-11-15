@@ -53,6 +53,8 @@ new Chart("myChart2", {
   data: {
     labels: xValues,
     datasets: [{
+      fill: false,
+      lineTension: 0,
       backgroundColor: "rgba(0,0,0,1.0)",
       borderColor: "rgba(0,0,0,0.1)",
       data: yValues
@@ -60,6 +62,8 @@ new Chart("myChart2", {
   },
   options:{
     legend: {display: false},
+    scales: {
+      yAxes: [{ticks: {min: 6, max:16}}],
     title: {
       display: true,
       text: "House Prices vs Size"
